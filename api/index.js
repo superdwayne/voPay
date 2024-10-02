@@ -1,7 +1,6 @@
 // api/endpoint.js
 const express = require('express'); // Import express
 const cors = require('cors'); // Import cors
-const axios = require('axios'); // Import axios
 require('dotenv').config(); // Load environment variables
 
 const app = express();
@@ -49,23 +48,7 @@ app.post('/api/submit', async (req, res) => {
         });
     }
 
-    // You can add additional functionality here, such as making a request to an external API
 
-    // Example of making an external API request using Axios
-    // Uncomment the following code block if needed
-    /*
-    const externalApiUrl = 'https://example.com/api/endpoint';
-    try {
-        const externalResponse = await axios.post(externalApiUrl, data);
-        return res.status(200).json({
-            message: 'Data processed successfully!',
-            externalData: externalResponse.data
-        });
-    } catch (error) {
-        console.error('Error calling external API:', error.message);
-        return res.status(500).json({ error: 'An error occurred while processing your request.' });
-    }
-    */
 
     // Respond with a success message if no external request is made
     return res.status(200).json({
