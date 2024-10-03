@@ -19,7 +19,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 // Endpoint to handle POST requests
-app.post('/api/submit', async (req, res) => {
+app.post('/api/withdraw', async (req, res) => {
     const data = req.body;
 
     // Validate API key from headers
